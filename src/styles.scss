@@ -164,4 +164,23 @@ main {
     }
 }
 
+#tercera {
+    padding-top: 2rem;
+    div {
+        padding: 1.5rem;
+        &:hover {
+            @include tarjeta;            
+        }
+        & img:last-child {
+            margin-right: .6rem;
+        }
+        div {
+            img
+            p {
+                display: inline-block;
+            }
+        }
+    }
+}
+
 

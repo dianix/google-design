@@ -142,4 +142,17 @@ main {
     background-color: #fff;
     box-shadow: 0px 0px 6px #bebebe; }
 
+#tercera {
+  padding-top: 2rem; }
+  #tercera div {
+    padding: 1.5rem; }
+    #tercera div:hover {
+      background-color: #fff;
+      box-shadow: 0px 0px 6px #bebebe; }
+    #tercera div img:last-child {
+      margin-right: .6rem; }
+    #tercera div div img
+    p {
+      display: inline-block; }
+
 /*# sourceMappingURL=styles.css.map */
