@@ -83,16 +83,20 @@ body {
 .caja-azul {
   background-color: #ebf2fe; }
 
-header nav #buscar {
-  position: relative;
-  margin-left: 95%; }
-header nav li {
-  list-style: none;
-  display: inline-block;
-  margin: 1rem; }
-  header nav li a {
-    text-decoration: none;
-    color: #414549; }
+.navbar__buscar--top {
+  position: fixed;
+  top: 6rem;
+  right: 10rem; }
+
+.navbar--top {
+  padding-top: 4rem; }
+
+.navbar--onscroll {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #bebebe; }
 
 h2, h1 {
   font-family: "Questrial", sans-serif;
@@ -111,8 +115,31 @@ p {
   color: #414549;
   margin: 1rem 0; }
 
-#primera:hover {
-  background-color: #fff;
-  box-shadow: 5px 5px 5px #888888; }
+header {
+  position: fixed; }
+  header nav {
+    height: 100%; }
+    header nav img#logo-nav {
+      width: 8rem;
+      display: none; }
+    header nav li {
+      list-style: none;
+      display: inline-block;
+      margin: 1rem; }
+      header nav li a {
+        text-decoration: none;
+        color: #414549;
+        font-weight: 600; }
+      header nav li:hover {
+        cursor: pointer; }
+
+main {
+  padding-top: 16rem; }
+
+#primera {
+  padding: 1.3rem; }
+  #primera:hover {
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #bebebe; }
 
 /*# sourceMappingURL=styles.css.map */

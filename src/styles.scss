@@ -5,6 +5,13 @@ $gris-oscuro:#2e2e2e;
 $gris-medio: #414549;
 $gris-claro: #5f6368;
 $azul-google: #4285f4;
+
+@mixin tarjeta {
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #bebebe;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -80,26 +87,21 @@ body {
 	background-color: lighten($azul-google,35%)
 }
 
-header {
-    div.row {
-        div.col-12 {}
-    }
-    nav {
-        #buscar {
-            position: relative;
-            margin-left: 95%;
-            
-        }
-        li {
-            list-style: none;
-            display: inline-block;
-            margin: 1rem;
-            a {
-                text-decoration: none;
-                color: $gris-medio;
-            }
-        }
-    }
+.navbar__buscar--top {
+    position: fixed;
+    top: 6rem;
+    right: 10rem;
+}
+
+.navbar--top {
+    padding-top: 4rem; 
+}
+
+.navbar--onscroll {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include tarjeta;
 }
 
 h2 {
@@ -124,8 +126,42 @@ p {
     margin: 1rem 0;
 }
 
-#primera:hover {
-    background-color: #fff;
-    box-shadow: 5px 5px 5px #888888;
+header {
+    position: fixed;
+    
+    //background-color: #fff;
+    nav {
+        height: 100%;
+        img#logo-nav {
+            width: 8rem;
+            display: none;
+        }    
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 1rem;
+            a {
+                text-decoration: none;
+                color: $gris-medio;
+                font-weight: 600;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
+
+main {
+    padding-top: 16rem;
+}
+
+#primera {
+    padding: 1.3rem;
+    &:hover {
+    @include tarjeta;
+    }
+}
+
 

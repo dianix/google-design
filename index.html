@@ -10,33 +10,26 @@
 </head>
 
 <body>
-    <header class="container">
-        <div class="row">
-            <div class="col-12 t-centro">
-                <img src="imgs/logo-tall.svg" alt="google-logo">
-            </div>
-            <nav class="t-centro">
-
-                <a id="buscar" href=""><img src="imgs/search-icon.png" alt="search"></a>
-                <ul>
-                    <li><a href="">LIBRARY</a></li>
-                    <li><a href="">NEWS</a></li>
-                    <li><a href="">RESOURCES</a></li>
-                    <li><a href="">JOBS</a></li>
-                    <li><a href="">ABOUT</a></li>
-                </ul>
-            </nav>
-
-        </div>
+    <header id="navegador" class=" t-centro ancho-total">
+        <img id="logo-top" src="imgs/logo-tall.svg" alt="google-logo">         
+        <nav class="t-centro">            
+            <img id="logo-nav" src="imgs/logo-tall.svg" alt="google-logo">           
+            <ul>
+                <li><a href="https://design.google/library/">LIBRARY</a></li>
+                <li><a href="https://design.google/news/">NEWS</a></li>
+                <li><a href="https://design.google/resources/">RESOURCES</a></li>
+                <li><a href="https://design.google/jobs/">JOBS</a></li>
+                <li><a href="https://design.google/about/">ABOUT</a></li>
+            </ul>
+            <a id="buscar" class="navbar__buscar--top" href=""><img src="imgs/search-icon.png" alt="search"></a>
+        </nav>     
     </header>
 
-    <main class="container">
-        <div class="row">
-            <div class="col-12 t-centro">
-                <img src="imgs/Method_Podcast_E1_Jay_Wong_.max-4000x2000.jpegquality-90.png" alt="">
-            </div>
-        </div>
+    <main class="container">        
         <section id="primera" class="row">
+            <div class="col-12 t-centro">
+                <img class="ancho-total" src="imgs/Method_Podcast_E1_Jay_Wong_.max-4000x2000.jpegquality-90.png" alt="">
+            </div>        
             <div class="col-8">
                 <h1>Method Podcast, Episode 1</h1>
                 <h3>Prototyping, tools, and designers who code: A conversation with Jay Wong of Project Fi</h3>
@@ -56,7 +49,7 @@
 
             </div>
             <div class="col-6 margen-sup">
-                <h5>more news</h5>
+                <a>more news</a>
                 <h5 class="mono margen-sup">06/13/2017</h5>
                 <h2>Join the Material Gallery Early Adopter Program</h2>
                 <p>Like staying ahead of the curve when it comes to design tools? Meet Gallery, a design collaboration app that makes it easy to find, present, and discuss work from a shared, central place. Brought to you by the Material Design...</p>
@@ -84,7 +77,9 @@
             
         </section>
     </main>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
