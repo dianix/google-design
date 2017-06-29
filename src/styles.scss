@@ -1,0 +1,131 @@
+$fuente-titulos: 'Questrial', sans-serif;
+$fuente-principal: 'Roboto', sans-serif;
+$fuente-secundaria: 'Roboto Mono', monospace;
+$gris-oscuro:#2e2e2e;
+$gris-medio: #414549;
+$gris-claro: #5f6368;
+$azul-google: #4285f4;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.row {
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        @extend .row:before;
+        clear: both;
+    }
+}
+
+[class*="col-"] {
+    min-height: 7px;
+    padding: 12px;
+    float: left;
+}
+
+@function anchoColumnas($columns) {
+    @return percentage(($columns/12));
+}
+
+@for $numColumna from 1 through 12 {
+    .col-#{$numColumna} {
+        width: anchoColumnas($numColumna);
+    }
+}
+
+body {
+    font-family: $fuente-principal;
+}
+
+.t-centro {
+    text-align: center;
+}
+
+.t-derecha {
+    text-align: right;
+}
+
+.separador-azul {
+	border: 2px solid $azul-google;
+    margin: 5rem 0 0;
+}
+
+.mono {
+    font-family: $fuente-secundaria;
+    color: $gris-claro;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+.margen-sup {
+    margin-top: 2rem;
+}
+
+.ancho-total{
+    width: 100%;
+}
+
+.caja-azul {
+	background-color: lighten($azul-google,35%)
+}
+
+header {
+    div.row {
+        div.col-12 {}
+    }
+    nav {
+        #buscar {
+            position: relative;
+            margin-left: 95%;
+            
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 1rem;
+            a {
+                text-decoration: none;
+                color: $gris-medio;
+            }
+        }
+    }
+}
+
+h2 {
+    font-family: $fuente-titulos;
+    color: $gris-oscuro;
+    margin: 1rem 0;
+}
+
+h1 {
+    @extend h2;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: $fuente-principal;
+    color: $gris-oscuro;
+    margin: 1rem 0;
+}
+
+p {
+    color: $gris-medio;
+    margin: 1rem 0;
+}
+
+#primera:hover {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #888888;
+}
+
