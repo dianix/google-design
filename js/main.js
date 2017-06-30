@@ -9,7 +9,7 @@ function navegadorCambio() {
     var logoTop = $("#logo-top");
     console.log(window.scrollY)
     
-    if (window.scrollY > 400) {
+    if (window.scrollY > 125) {
         buscar.removeClass("navbar__buscar--top");
         logoTop.css("display", "none");
         logoNav.css("display", "inline-block");
@@ -17,7 +17,7 @@ function navegadorCambio() {
         navbar.addClass("navbar--onscroll"); 
 
        
-    } else if (window.scrollY < 400) {
+    } else if (window.scrollY < 125) {
         buscar.addClass("navbar__buscar--top")
         logoTop.css("display", "inline-block");
         logoNav.css("display", "none");

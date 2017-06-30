@@ -3,12 +3,15 @@ $fuente-principal: 'Roboto', sans-serif;
 $fuente-secundaria: 'Roboto Mono', monospace;
 $gris-oscuro:#2e2e2e;
 $gris-medio: #414549;
-$gris-claro: #5f6368;
+$gris-claro: #6b6e72;
 $azul-google: #4285f4;
 
 @mixin tarjeta {
     background-color: #fff;
     box-shadow: 0px 0px 6px #bebebe;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
@@ -51,10 +54,6 @@ $azul-google: #4285f4;
     }
 }
 
-body {
-    font-family: $fuente-principal;
-}
-
 .t-centro {
     text-align: center;
 }
@@ -84,7 +83,36 @@ body {
 }
 
 .caja-azul {
-	background-color: lighten($azul-google,35%)
+	background-color: lighten($azul-google,35%);
+}
+
+.enlace-der {
+    color: $azul-google;
+    font-weight: 600;
+    text-transform: uppercase;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.boton-sig {
+        border: none;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: .5rem 0 1rem;
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 3rem;
+        font-weight: 900;
+        color: $azul-google;
+        box-shadow: 0px 3px 12px #959595;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+body {
+    font-family: $fuente-principal;
 }
 
 .navbar__buscar--top {
@@ -98,9 +126,10 @@ body {
 }
 
 .navbar--onscroll {
+    position: fixed;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     @include tarjeta;
 }
 
@@ -112,7 +141,7 @@ h2 {
 
 h1 {
     @extend h2;
-    font-size: 2rem;
+    font-size: 2vh;
 }
 
 h3 {
@@ -127,16 +156,16 @@ p {
 }
 
 header {
-    position: fixed;
+    height: 4rem;
+    img#logo-nav {
+            width: 10vw;
+            display: none;
+        }    
     
     //background-color: #fff;
     nav {
         height: 100%;
-        img#logo-nav {
-            width: 8rem;
-            display: none;
-        }    
-        
+                
         li {
             list-style: none;
             display: inline-block;
@@ -154,7 +183,7 @@ header {
 }
 
 main {
-    padding-top: 16rem;
+    padding-top: 6rem;
 }
 
 #primera {
@@ -175,12 +204,114 @@ main {
             margin-right: .6rem;
         }
         div {
-            img
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                margin-right: 1.2rem;
+            }
             p {
                 display: inline-block;
+            }
+        }
+         &:nth-child(4){
+            margin-bottom: .3rem;
+        }
+    }
+    
+    & div:last-child {
+        hr {
+            margin: 0;
+        }
+    }
+}
+
+#cuarta {
+    div.col-4 {
+        h2 {
+            margin: 0 0 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    div.col-8 {
+        div.ficha:hover {
+            @include tarjeta;
+        }
+    }
+}
+
+#quinta {
+    div.col-6 {
+        @include tarjeta;
+        &:nth-child(2) {
+            margin-bottom: 1.2rem;
+        }
+        &:nth-child(4) {
+            margin-bottom: .3rem;
+        }
+    }    
+}
+
+#sexta {
+    div.col-4:hover {
+        @include tarjeta;
+    }
+}
+
+#septima {
+    div.col-6 {
+        @include tarjeta;
+        &:nth-child(2) {
+            margin-bottom: .3rem;
+        }
+    }
+}
+
+.min {
+    color: $gris-claro;
+    font-family: $fuente-principal;
+    font-size: 14px;
+}
+
+#datos {
+    div.col-4 {
+        padding: 0 3rem;
+        ul {
+            margin: 1rem 0 0;
+            li {                
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    @extend .min;
+                }
             }
         }
     }
 }
 
+.final {
+    border: 1.7px solid;
+    border-color: lighten($gris-claro,50%);
+    margin: 5rem 0 0;
+    
+}
+
+footer {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 2rem;
+    }
+    a {
+        text-decoration: none;
+        @extend .min;
+    }
+}
 

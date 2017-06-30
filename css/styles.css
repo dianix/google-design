@@ -55,9 +55,6 @@
 .col-12 {
   width: 100%; }
 
-body {
-  font-family: "Roboto", sans-serif; }
-
 .t-centro {
   text-align: center; }
 
@@ -70,7 +67,7 @@ body {
 
 .mono {
   font-family: "Roboto Mono", monospace;
-  color: #5f6368;
+  color: #6b6e72;
   font-size: .9rem;
   font-weight: 200; }
 
@@ -83,6 +80,30 @@ body {
 .caja-azul {
   background-color: #ebf2fe; }
 
+.enlace-der {
+  color: #4285f4;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .enlace-der:hover {
+    cursor: pointer; }
+
+.boton-sig {
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: .5rem 0 1rem;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  font-weight: 900;
+  color: #4285f4;
+  box-shadow: 0px 3px 12px #959595; }
+  .boton-sig:hover {
+    cursor: pointer; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
 .navbar__buscar--top {
   position: fixed;
   top: 6rem;
@@ -92,11 +113,14 @@ body {
   padding-top: 4rem; }
 
 .navbar--onscroll {
+  position: fixed;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   background-color: #fff;
   box-shadow: 0px 0px 6px #bebebe; }
+  .navbar--onscroll:hover {
+    cursor: pointer; }
 
 h2, h1 {
   font-family: "Questrial", sans-serif;
@@ -104,7 +128,7 @@ h2, h1 {
   margin: 1rem 0; }
 
 h1 {
-  font-size: 2rem; }
+  font-size: 2vh; }
 
 h3 {
   font-family: "Roboto", sans-serif;
@@ -116,12 +140,12 @@ p {
   margin: 1rem 0; }
 
 header {
-  position: fixed; }
+  height: 4rem; }
+  header img#logo-nav {
+    width: 10vw;
+    display: none; }
   header nav {
     height: 100%; }
-    header nav img#logo-nav {
-      width: 8rem;
-      display: none; }
     header nav li {
       list-style: none;
       display: inline-block;
@@ -134,13 +158,15 @@ header {
         cursor: pointer; }
 
 main {
-  padding-top: 16rem; }
+  padding-top: 6rem; }
 
 #primera {
   padding: 1.3rem; }
   #primera:hover {
     background-color: #fff;
     box-shadow: 0px 0px 6px #bebebe; }
+    #primera:hover:hover {
+      cursor: pointer; }
 
 #tercera {
   padding-top: 2rem; }
@@ -149,10 +175,87 @@ main {
     #tercera div:hover {
       background-color: #fff;
       box-shadow: 0px 0px 6px #bebebe; }
+      #tercera div:hover:hover {
+        cursor: pointer; }
     #tercera div img:last-child {
       margin-right: .6rem; }
-    #tercera div div img
-    p {
-      display: inline-block; }
+    #tercera div div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      #tercera div div img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-right: 1.2rem; }
+      #tercera div div p {
+        display: inline-block; }
+    #tercera div:nth-child(4) {
+      margin-bottom: .3rem; }
+  #tercera div:last-child hr {
+    margin: 0; }
+
+#cuarta div.col-4 h2, #cuarta div.col-4 h1 {
+  margin: 0 0 2rem; }
+#cuarta div.col-4 p {
+  font-size: 1.2rem; }
+#cuarta div.col-8 div.ficha:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #bebebe; }
+  #cuarta div.col-8 div.ficha:hover:hover {
+    cursor: pointer; }
+
+#quinta div.col-6 {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #bebebe; }
+  #quinta div.col-6:hover {
+    cursor: pointer; }
+  #quinta div.col-6:nth-child(2) {
+    margin-bottom: 1.2rem; }
+  #quinta div.col-6:nth-child(4) {
+    margin-bottom: .3rem; }
+
+#sexta div.col-4:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #bebebe; }
+  #sexta div.col-4:hover:hover {
+    cursor: pointer; }
+
+#septima div.col-6 {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #bebebe; }
+  #septima div.col-6:hover {
+    cursor: pointer; }
+  #septima div.col-6:nth-child(2) {
+    margin-bottom: .3rem; }
+
+.min, #datos div.col-4 ul li a, footer a {
+  color: #6b6e72;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px; }
+
+#datos div.col-4 {
+  padding: 0 3rem; }
+  #datos div.col-4 ul {
+    margin: 1rem 0 0; }
+    #datos div.col-4 ul li {
+      list-style: none; }
+      #datos div.col-4 ul li a {
+        text-decoration: none; }
+
+.final {
+  border: 1.7px solid;
+  border-color: #edeeef;
+  margin: 5rem 0 0; }
+
+footer {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  footer img {
+    width: 2rem; }
+  footer a {
+    text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */
