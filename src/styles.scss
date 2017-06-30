@@ -1,4 +1,4 @@
-$fuente-titulos: 'Questrial', sans-serif;
+$fuente-titulos: 'Product Sans', sans-serif;
 $fuente-principal: 'Roboto', sans-serif;
 $fuente-secundaria: 'Roboto Mono', monospace;
 $gris-oscuro:#2e2e2e;
@@ -9,11 +9,15 @@ $azul-google: #4285f4;
 @mixin tarjeta {
     background-color: #fff;
     box-shadow: 0px 0px 6px #bebebe;
-    &:hover {
-        cursor: pointer;
-    }
+    cursor: pointer;
 }
 
+@mixin img-redonda {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 1.2rem;
+}
 
 * {
     box-sizing: border-box;
@@ -141,7 +145,7 @@ h2 {
 
 h1 {
     @extend h2;
-    font-size: 2vh;
+    //font-size: 2vh;
 }
 
 h3 {
@@ -195,7 +199,7 @@ main {
 
 #tercera {
     padding-top: 2rem;
-    div {
+    div.col-6 {
         padding: 1.5rem;
         &:hover {
             @include tarjeta;            
@@ -208,15 +212,16 @@ main {
             justify-content: flex-start;
             align-items: center;
             img {
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                margin-right: 1.2rem;
+                @include img-redonda;
             }
             p {
                 display: inline-block;
             }
         }
+        &:nth-child(2) {
+            margin-bottom: 1rem;
+        }
+        
          &:nth-child(4){
             margin-bottom: .3rem;
         }
@@ -247,7 +252,9 @@ main {
 
 #quinta {
     div.col-6 {
-        @include tarjeta;
+        &:hover {
+            @include tarjeta;
+        }
         &:nth-child(2) {
             margin-bottom: 1.2rem;
         }
@@ -265,7 +272,9 @@ main {
 
 #septima {
     div.col-6 {
-        @include tarjeta;
+        &:hover  {
+            @include tarjeta;
+        }
         &:nth-child(2) {
             margin-bottom: .3rem;
         }
@@ -280,11 +289,13 @@ main {
 
 #datos {
     div.col-4 {
-        padding: 0 3rem;
+        
         ul {
-            margin: 1rem 0 0;
+            
+            padding: 0;
             li {                
                 list-style: none;
+                padding: 0;
                 a {
                     text-decoration: none;
                     @extend .min;
