@@ -288,6 +288,9 @@ main {
                 a {
                     text-decoration: none;
                     @extend .min;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -312,6 +315,9 @@ footer {
     a {
         text-decoration: none;
         @extend .min;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 

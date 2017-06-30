@@ -242,6 +242,8 @@ main {
       list-style: none; }
       #datos div.col-4 ul li a {
         text-decoration: none; }
+        #datos div.col-4 ul li a:hover {
+          cursor: pointer; }
 
 .final {
   border: 1.7px solid;
@@ -257,5 +259,7 @@ footer {
     width: 2rem; }
   footer a {
     text-decoration: none; }
+    footer a:hover {
+      cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
