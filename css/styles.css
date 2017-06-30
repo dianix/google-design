@@ -208,6 +208,19 @@ main {
   margin-bottom: 1.2rem; }
 #quinta div.col-6:nth-child(4) {
   margin-bottom: .3rem; }
+#quinta div.col-6 div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  #quinta div.col-6 div img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 1.2rem; }
+  #quinta div.col-6 div p {
+    display: inline-block; }
+#quinta hr {
+  margin: 0; }
 
 #sexta div.col-4:hover {
   background-color: #fff;
@@ -220,21 +233,37 @@ main {
   cursor: pointer; }
 #septima div.col-6:nth-child(2) {
   margin-bottom: .3rem; }
+#septima div.col-6 div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  #septima div.col-6 div img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 1.2rem; }
+  #septima div.col-6 div p {
+    display: inline-block; }
+#septima hr {
+  margin: 0; }
 
 .min, #datos div.col-4 ul li a, footer a {
   color: #6b6e72;
   font-family: "Roboto", sans-serif;
   font-size: 14px; }
 
-#datos div.col-4 ul {
-  padding: 0; }
-  #datos div.col-4 ul li {
-    list-style: none;
+#datos div.col-4 {
+  padding: 0 2rem; }
+  #datos div.col-4 ul {
+    margin-top: 1rem;
     padding: 0; }
-    #datos div.col-4 ul li a {
-      text-decoration: none; }
-      #datos div.col-4 ul li a:hover {
-        cursor: pointer; }
+    #datos div.col-4 ul li {
+      list-style: none;
+      padding: 0; }
+      #datos div.col-4 ul li a {
+        text-decoration: none; }
+        #datos div.col-4 ul li a:hover {
+          cursor: pointer; }
 
 .final {
   border: 1.7px solid;
