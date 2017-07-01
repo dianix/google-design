@@ -1,23 +1,6 @@
-$fuente-titulos: 'Product Sans', sans-serif;
-$fuente-principal: 'Roboto', sans-serif;
-$fuente-secundaria: 'Roboto Mono', monospace;
-$gris-oscuro:#2e2e2e;
-$gris-medio: #414549;
-$gris-claro: #6b6e72;
-$azul-google: #4285f4;
-
-@mixin tarjeta {
-    background-color: #fff;
-    box-shadow: 0px 0px 6px #bebebe;
-    cursor: pointer;
-}
-
-@mixin img-redonda {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin-right: 1.2rem;
-}
+@import 'variables';
+@import 'mixins';
+@import 'funciones';
 
 * {
     box-sizing: border-box;
@@ -46,16 +29,6 @@ $azul-google: #4285f4;
     min-height: 7px;
     padding: 12px;
     float: left;
-}
-
-@function anchoColumnas($columns) {
-    @return percentage(($columns/12));
-}
-
-@for $numColumna from 1 through 12 {
-    .col-#{$numColumna} {
-        width: anchoColumnas($numColumna);
-    }
 }
 
 .t-centro {
