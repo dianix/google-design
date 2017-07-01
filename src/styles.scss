@@ -113,12 +113,13 @@ body {
 h2 {
     font-family: $fuente-titulos;
     color: $gris-oscuro;
+    font-weight: 300;
     margin: 1rem 0;
 }
 
 h1 {
     @extend h2;
-    //font-size: 2vh;
+    font-size: 5.3vh;
 }
 
 h3 {
@@ -151,6 +152,7 @@ header {
                 text-decoration: none;
                 color: $gris-medio;
                 font-weight: 600;
+                font-size: 14px;
             }
             &:hover {
                 cursor: pointer;
@@ -160,7 +162,7 @@ header {
 }
 
 main {
-    padding-top: 6rem;
+    padding-top: 12rem;
 }
 
 #primera {

@@ -124,7 +124,11 @@ body {
 h2, h1 {
   font-family: "Product Sans", sans-serif;
   color: #2e2e2e;
+  font-weight: 300;
   margin: 1rem 0; }
+
+h1 {
+  font-size: 5.3vh; }
 
 h3 {
   font-family: "Roboto", sans-serif;
@@ -149,12 +153,13 @@ header {
       header nav li a {
         text-decoration: none;
         color: #414549;
-        font-weight: 600; }
+        font-weight: 600;
+        font-size: 14px; }
       header nav li:hover {
         cursor: pointer; }
 
 main {
-  padding-top: 6rem; }
+  padding-top: 12rem; }
 
 #primera {
   padding: 1.3rem; }
